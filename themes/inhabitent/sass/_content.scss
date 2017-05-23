@@ -7,10 +7,9 @@
 body {
 	width: 100%;
 	margin: 0 auto;
-	font-family: "Merriweather", serif;
 }
 
-h1, h2, .copyright {
+h1, h2, .copyright, .menu {
 	font-family: "novecento_sans_wide", sans-serif;
 	font-weight: normal;
 	text-transform: uppercase;
@@ -19,11 +18,23 @@ h1, h2, .copyright {
 .container {
 	width: 1120px;
 	margin: 0 auto;
+}
+
+.entry-header {
+	display: flex;
+	justify-content: center;
 	text-align: center;
 }
 
-.home-hero {
-	background: url('../../assets/images/home-hero.jpg');
+
+.entry-title {
+	color: #fff;
+	font-weight: 700;
+	position: absolute;
+	top: 50vh;
+	left: 50vw;
+	transform: translate(-50%, -70%);
+	font-size: 3rem;
 }
 
 .sticky {

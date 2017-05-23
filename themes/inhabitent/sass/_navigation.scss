@@ -26,11 +26,52 @@ a {
 
 /* Menus */
 
+.site-header {
+	padding: 1rem 0;
+	position: absolute;
+	width: 100%;
+	margin-top: 1.5rem;
+}
+
+.site-header .container {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.site-branding {
+	height: 33px;
+	width: 50px;
+}
+
+.logo {
+	background:
+		url('../../assets/images/logos/inhabitent-logo-tent-white.svg') no-repeat;
+	background-size: 50px 33px;
+	height: 33px;
+}
+
 .main-navigation {
 	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
+	display: flex;
+	
+	.menu {
+		float: right;
+
+		a {
+			color: #fff;
+			text-shadow: 1px 1px 2px #3d3d3d;
+		}
+
+		a:hover {
+			color: #f5ecc4;
+		}
+
+		li {
+			margin: 0 1rem;
+		}
+
+	}
 
 	ul {
 		display: none;

@@ -11,9 +11,21 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info container">
+					<div class="contact">
+						<h3>Contact Us</h3>
+						<i class="fa fa-envelope" aria-hidden="true"></i><p>info@inhabitent.com</p>
+						<p><i class="fa fa-phone" aria-hidden="true"></i>778-456-7891</p>
+					</div>
+					<div class="hours">
+						<h3>Business Hours</h3>
+						<p><span class="bold">Monday-Friday:</span> 9am to 5pm</p>
+						<p><span class="bold">Saturday:</span> 10am to 2pm</p>
+						<p><span class="bold">Sunday:</span> Closed</p>
+					</div>
+					<div class="horizontal-logo"></div>
 					<!--<a href="<?php echo esc_url( 'https://wordpress.org/' ); ?>"><?php printf( esc_html( 'Proudly powered by %s' ), 'WordPress' ); ?></a>-->
-					<p><span class="copyright">Copyright &copy; 2016 Inhabitent</span></p>
 				</div><!-- .site-info -->
+				<p class="copyright container">Copyright &copy; 2016 Inhabitent</p>
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

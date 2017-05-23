@@ -3,3 +3,98 @@
 --------------------------------------------------------------*/
 
 /* Front page */
+
+.home-hero {
+	background:
+    url('../../assets/images/logos/inhabitent-logo-full.svg') center no-repeat,
+    linear-gradient(to bottom, rgba(0, 0, 0 ,0.4), rgba(0,0,0,0.4)) center,
+    url('../../assets/images/home-hero.jpg') top no-repeat;
+  background-size:
+    275px,
+    cover,
+    cover;
+  height: 100vh;
+}
+
+.home-header {
+  display: none;
+}
+
+.about-hero {
+	background:
+    linear-gradient(to bottom, rgba(0, 0, 0 ,0.4), rgba(0,0,0,0.4)) center,
+    url('../../assets/images/about-hero.jpg') bottom no-repeat;
+  background-size:
+    cover,
+    cover;
+  height: 100vh;
+}
+
+.about {
+  margin: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h2 {
+    color: black;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin: 2.5rem 0 1rem;;
+  }
+
+  p {
+    line-height: 1.75rem;
+  }
+}
+
+.site-footer {
+  background:
+    url('../../assets/images/dark-wood.png');
+  background-size: 512px 512px;
+}
+
+.site-info {
+  display: flex;
+
+  h3 {
+    color: #d99054;
+    font-family: "novecento_sans_wide", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin: 0.5rem 0 ;
+  }
+  
+  p {
+    margin-bottom: .5rem;
+  }
+}
+
+.contact, .hours {
+  color: #fff;
+  margin: 3rem 0;
+  width: 25%;
+}
+
+.hours {
+  width: 50%;
+}
+
+.horizontal-logo {
+  background:
+    url('../../assets/images/logos/inhabitent-logo-text.svg') no-repeat;
+  background-size: 100%;
+  margin: 3.5rem 0 3rem;
+  width: 25%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.copyright {
+  color: #fff;
+  padding: 1.5rem 0;
+  text-align: center;
+  width: 100%;
+}
