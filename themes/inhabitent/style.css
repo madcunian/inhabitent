@@ -488,15 +488,13 @@ a {
   clear: both;
   display: -ms-flexbox;
   display: flex; }
-  .main-navigation .menu {
-    float: right; }
-    .main-navigation .menu a {
-      color: #fff;
-      text-shadow: 1px 1px 2px #3d3d3d; }
-    .main-navigation .menu a:hover {
-      color: #f5ecc4; }
-    .main-navigation .menu li {
-      margin: 0 1rem; }
+  .main-navigation .menu a {
+    color: #fff;
+    text-shadow: 1px 1px 2px #3d3d3d; }
+  .main-navigation .menu a:hover {
+    color: #f5ecc4; }
+  .main-navigation .menu li {
+    margin: 0 1rem; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -654,11 +652,7 @@ h1, h2, .copyright, .menu {
 .entry-title {
   color: #fff;
   font-weight: 700;
-  position: absolute;
-  top: 50vh;
-  left: 50vw;
-  transform: translate(-50%, -70%);
-  font-size: 3rem; }
+  position: absolute; }
 
 .sticky {
   display: block; }
@@ -786,7 +780,8 @@ object {
 
 .site-footer {
   background: url("../../assets/images/dark-wood.png");
-  background-size: 512px 512px; }
+  background-size: 512px 512px;
+  margin-top: 4rem; }
 
 .site-info {
   display: -ms-flexbox;
@@ -822,3 +817,90 @@ object {
   padding: 1.5rem 0;
   text-align: center;
   width: 100%; }
+
+.single-product-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin: 0 auto 3rem;
+  padding-top: 8rem;
+  width: 1120px; }
+  .single-product-content .entry-title {
+    display: none; }
+
+.product-image {
+  width: 48%; }
+
+.product-title {
+  color: #d99054;
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  line-height: 3rem;
+  margin-top: 0;
+  margin-bottom: .75rem; }
+
+.product-content {
+  line-height: 1.75rem;
+  margin: 0;
+  width: 48%; }
+
+.price {
+  font-family: "novecento_sans_wide", sans-serif;
+  font-size: 1.85rem;
+  margin-top: 0;
+  margin-bottom: 2rem; }
+
+.social-buttons {
+  margin-top: 2rem; }
+
+.product-button {
+  border: 1px solid #000;
+  color: #000;
+  font-family: "novecento_sans_wide", sans-serif;
+  font-size: .9rem;
+  padding: .6rem 1.75rem;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.product-button:hover {
+  color: #fff;
+  border: 1px solid #248A83;
+  background-color: #248A83; }
+
+.product-button:visited {
+  color: #000; }
+
+.nav-previous, .nav-next {
+  display: none; }
+
+.page-header {
+  border-bottom: 1px dashed #a1a1a1;
+  margin: 0 auto 2.5rem;
+  padding-top: 7rem;
+  text-align: center;
+  width: 1120px; }
+
+.page-title {
+  font-weight: 700;
+  letter-spacing: .1rem; }
+
+.product-type {
+  margin-bottom: 3rem;
+  margin-left: 0;
+  padding-left: 0; }
+
+.product-type li {
+  color: #248A83;
+  display: inline;
+  font-family: "novecento_sans_wide", sans-serif;
+  font-size: 1.15rem;
+  margin: 1.5rem;
+  text-transform: uppercase; }
+
+.product-type a {
+  text-decoration: none; }
+
+.product-type a:visited {
+  color: #248A83; }

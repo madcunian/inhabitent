@@ -13,8 +13,8 @@
 				<div class="site-info container">
 					<div class="contact">
 						<h3>Contact Us</h3>
-						<i class="fa fa-envelope" aria-hidden="true"></i><p>info@inhabitent.com</p>
-						<p><i class="fa fa-phone" aria-hidden="true"></i>778-456-7891</p>
+						<p><i class="fa fa-envelope fa-fw" aria-hidden="true"></i>info@inhabitent.com</p>
+						<p><i class="fa fa-phone fa-fw" aria-hidden="true"></i>778-456-7891</p>
 					</div>
 					<div class="hours">
 						<h3>Business Hours</h3>
