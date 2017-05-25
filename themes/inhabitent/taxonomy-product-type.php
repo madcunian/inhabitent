@@ -1,5 +1,6 @@
 <?php
 /**
+ * Template Name: Product Type
  * The main template file.
  *
  * @package Inhabitent Theme
@@ -15,7 +16,6 @@
 
 			<header class="page-header">
 				<?php
-          // $args = array( 'products_per_page' => 16,);
           add_filter( 'get_the_archive_title', function ( $title ) {
             $title = "Shop Stuff";
             return $title;
