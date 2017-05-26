@@ -55,3 +55,23 @@ function inhabitent_modify_archive_queries( $query ) {
 	}
 }
 add_action( 'pre_get_posts', 'inhabitent_modify_archive_queries' );
+
+function my_styles_method() {
+	wp_enqueue_style(
+		'custom-style',
+		get_template_directory_uri() . '/build/css/style.min.css'
+	);
+		$background = CFS()->get( 'about_hero' );
+		$custom_css = "
+			.about-hero {
+				background:
+					linear-gradient(to bottom, rgba(0, 0, 0 ,0.4), rgba(0,0,0,0.4)) center,
+					url({$background}) bottom no-repeat;
+				background-size:
+					cover,
+					cover;
+				height: 100vh;
+			}";
+		wp_add_inline_style( 'custom-style', $custom_css );
+}
+add_action( 'wp_enqueue_scripts', 'my_styles_method' );

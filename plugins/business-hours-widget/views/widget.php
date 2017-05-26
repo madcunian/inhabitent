@@ -1,5 +1,3 @@
-<!-- This file is used to markup the public-facing widget. -->
-
 <?php if ( strlen( trim( $monday_friday ) ) > 0 ) : ?>
   <p>
     <span class="bold">Monday-Friday:</span> <?php echo $monday_friday ?>

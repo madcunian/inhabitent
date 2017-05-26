@@ -83,17 +83,8 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
  * Enqueue scripts and styles.
  */
 function inhabitent_scripts() {
+	
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
-
-	$about_hero_url = CFS()->get( 'about_hero' );
-    if ( ! $about_hero_url ){
-        return;
-    }
-    $about_hero_style = ".page-template-about .entry-header {
-        background: linear-gradient( to bottom, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.4) 100% ), url({$about_hero_url}) no-repeat center bottom;
-        background-size: cover, cover;
-    }"; 
-    wp_add_inline_style('red-starter-style', $about_hero_style);
 
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/35e3d1be3c.js', array(), '4.7.0' );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );

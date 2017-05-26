@@ -9,7 +9,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
+		<!--<div class="journal-archive">-->
 		<?php if ( have_posts() ) : ?>
 
 			<?php if ( is_home() && ! is_front_page() ) : ?>
@@ -23,6 +23,7 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content' ); ?>
 
+			<p class="entry"><a href="<?php the_permalink(); ?>" class="product-button">Read More →</a></p>
 			<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
@@ -32,7 +33,7 @@ get_header(); ?>
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
 		<?php endif; ?>
-
+		<!--</div>-->
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

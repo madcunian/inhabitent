@@ -15,3 +15,49 @@
 .widget_search .search-submit {
 	display: none;
 }
+
+.widget-area {
+	flex: 0 1 27%;
+	padding-left: 3.5rem;
+	padding-top: 3rem;
+}
+
+.widget_text, .contacts-class, .business-hours-class, .widget_archive {
+	margin-bottom: 3rem;
+	a {
+		color: #248A83;
+		text-decoration: none;
+	}
+
+	a:hover {
+		color: $color__text-main;
+	}
+
+  .widget-title {
+    font-family: "novecento_sans_wide", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin: 0 0 1.5rem;
+    text-align: left;
+  }
+}
+
+.contacts-class {
+	p {
+		margin-bottom: .5rem;
+	}
+
+	i {
+		margin-right: .5rem;
+		text-align: center;
+		width: 15px;
+	}
+}
+
+.widget_archive ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}

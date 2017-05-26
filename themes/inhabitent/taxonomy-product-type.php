@@ -16,10 +16,10 @@
 
 			<header class="page-header">
 				<?php
-          add_filter( 'get_the_archive_title', function ( $title ) {
-            $title = "Shop Stuff";
-            return $title;
-          });
+          // add_filter( 'get_the_archive_title', function ( $title ) {
+          //   $title = "Shop Stuff";
+          //   return $title;
+          // });
 
 					the_archive_title( '<h2 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-descaiption">', '</div>' );

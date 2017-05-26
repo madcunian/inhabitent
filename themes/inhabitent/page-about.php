@@ -16,7 +16,6 @@ get_header(); ?>
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 			<?php endwhile; // End of the loop. ?>
         <div class="entry-content">
-          <?php echo CFS()->get( 'about_hero' ); ?>
           <?php echo CFS()->get( 'our_story' ); ?>
           <?php echo CFS()->get( 'our_team' ); ?>
 

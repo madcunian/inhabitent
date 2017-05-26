@@ -17,7 +17,11 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
-	<?php // You can start editing here -- including this comment! ?>
+	<div class="comments-social social-buttons">
+		<a class="product-button" href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Like</a>
+		<a class="product-button" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
+		<a class="product-button" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> Pin</a>
+	</div>
 
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
@@ -32,7 +36,8 @@ if ( post_password_required() ) {
 				<div class="nav-previous"><?php previous_comments_link( esc_html( 'Older Comments' ) ); ?></div>
 				<div class="nav-next"><?php next_comments_link( esc_html( 'Newer Comments' ) ); ?></div>
 
-			</div><!-- .nav-links -->
+			</div>
+			<!-- .nav-links -->
 		</nav><!-- #comment-nav-above -->
 		<?php endif; // Check for comment navigation. ?>
 

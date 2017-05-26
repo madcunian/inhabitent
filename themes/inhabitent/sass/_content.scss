@@ -5,8 +5,9 @@
 /* Posts and pages */
 
 body {
-	width: 100%;
+	line-height: 1.75rem;
 	margin: 0 auto;
+	width: 100%;
 }
 
 h1, h2 {
@@ -27,19 +28,6 @@ h1, h2 {
 .container {
 	width: 1120px;
 	margin: 0 auto;
-}
-
-.entry-header {
-	display: flex;
-	justify-content: center;
-	text-align: center;
-}
-
-
-.entry-title {
-	color: #fff;
-	font-weight: 700;
-	position: absolute;
 }
 
 .sticky {
@@ -84,10 +72,4 @@ h1, h2 {
 }
 .bypostauthor {
 	display: block;
-}
-
-
-.entry-content {
-	margin: 0 auto;
-	max-width: 800px;
 }
