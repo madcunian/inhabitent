@@ -19,12 +19,19 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+			<section class="product-grid container">
+        <?php while ( have_posts() ) : the_post(); ?>
+          <div class="product-grid-item">
+            <div class="product-item-thumbnail">
+              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+            </div>
+            <p class="product-item-text">
+              <?php the_title(); ?>
+              <span>......</span>
+              <?php echo CFS()->get( 'price' ); ?>
+            </p>
+          </div>
+      </setion>
 
 			<?php endwhile; ?>
 
@@ -39,5 +46,4 @@ get_header(); ?>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

@@ -15,21 +15,25 @@
 
 			<header class="page-header">
 				<?php
-          // $args = array( 'products_per_page' => 16,);
-          add_filter( 'get_the_archive_title', function ( $title ) {
-            $title = "Shop Stuff";
-            return $title;
-          });
-
 					the_archive_title( '<h2 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-descaiption">', '</div>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-        <ul class="product-type">
-          <li><a href="">Do</a></li>
-          <li><a href="">Eat</a></li>
-          <li><a href="">Sleep</a></li>
-          <li><a href="">Wear</a></li>
-        </ul>
+
+      <?php
+        $product_types = get_terms(array (
+          'taxonomy' => 'product_type',
+          'hide_empty' => 0
+        ));
+        if (!empty($product_types) && !is_wp_error($product_types)) : ?>
+      
+        <div class="product-taxonomy-shop container">
+          <?php foreach ($product_types as $product_type) : ?>
+            <div class="product-taxonomy">
+              <a href="<?php echo get_term_link($product_type);?>"><?php echo $product_type->name; ?></a>
+            </div>
+          <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
 			</header><!-- .page-header -->
 
       <section class="product-grid container">

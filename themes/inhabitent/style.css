@@ -917,10 +917,11 @@ object {
   width: 1120px; }
 
 .page-title {
+  font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: .1rem;
   margin: 0;
-  margin-bottom: 2rem; }
+  margin-bottom: 2.5rem; }
 
 .product-type {
   margin-bottom: 3rem;
@@ -1051,6 +1052,27 @@ object {
 
 .product-type-button:visited {
   color: #fff; }
+
+.product-taxonomy-shop {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  margin-bottom: 3rem; }
+
+.product-taxonomy {
+  color: #248A83;
+  font-family: "novecento_sans_wide", sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 1.5rem; }
+  .product-taxonomy a {
+    text-decoration: none; }
+  .product-taxonomy a:hover {
+    color: #404040; }
+  .product-taxonomy a:visited {
+    color: #248A83; }
 
 .blog .site-content, .post-template-default .site-content {
   display: -ms-flexbox;

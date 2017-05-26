@@ -75,3 +75,14 @@ function my_styles_method() {
 		wp_add_inline_style( 'custom-style', $custom_css );
 }
 add_action( 'wp_enqueue_scripts', 'my_styles_method' );
+
+function archive_title_filter( $title ) {
+	if ( is_post_type_archive( 'product' ) ) {
+		$title = 'Shop Stuff';
+	} elseif ( is_tax( 'product_type' ) ) {
+		$title = single_term_title('', false);
+	}
+	return $title;
+}
+
+add_filter( 'get_the_archive_title', 'archive_title_filter' );

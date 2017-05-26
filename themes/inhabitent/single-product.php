@@ -12,7 +12,6 @@ get_header(); ?>
     
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			
       <div class="single-product-content">
         <div class="product-image"><?php the_post_thumbnail( 'large' ); ?></div>
         <div class="product-content">

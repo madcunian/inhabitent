@@ -1,14 +1,12 @@
 <?php
 /**
- * Template Name: Product Type
- * The main template file.
+ * The template for displaying archive pages.
  *
- * @package Inhabitent Theme
+ * @package RED_Starter_Theme
  */
 
- get_header(); ?>
+get_header(); ?>
 
- <!-- THE REST OG THE PAGE MARKUP AND PHP HERE -->
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -16,23 +14,12 @@
 
 			<header class="page-header">
 				<?php
-          // add_filter( 'get_the_archive_title', function ( $title ) {
-          //   $title = "Shop Stuff";
-          //   return $title;
-          // });
-
-					the_archive_title( '<h2 class="page-title">', '</h1>' );
-					the_archive_description( '<div class="taxonomy-descaiption">', '</div>' );
+					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-        <ul class="product-type">
-          <li><a href="">Do</a></li>
-          <li><a href="">Eat</a></li>
-          <li><a href="">Sleep</a></li>
-          <li><a href="">Wear</a></li>
-        </ul>
 			</header><!-- .page-header -->
 
-      <section class="product-grid container">
+			<section class="product-grid container">
         <?php while ( have_posts() ) : the_post(); ?>
           <div class="product-grid-item">
             <div class="product-item-thumbnail">
@@ -56,9 +43,7 @@
 
 		<?php endif; ?>
 
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-
- <?php get_footer(); ?>
+<?php get_footer(); ?>
