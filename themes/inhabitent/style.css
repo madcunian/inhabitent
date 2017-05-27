@@ -326,6 +326,7 @@ big {
 # Elements
 --------------------------------------------------------------*/
 html {
+  margin: 0;
   box-sizing: border-box;
   font-size: 16px;
   font-size: 1rem; }
@@ -462,10 +463,10 @@ a {
 
 /* Menus */
 .site-header {
-  padding: 1rem 0;
-  position: absolute;
+  padding: .5rem 0;
+  position: fixed;
   width: 100%;
-  margin-top: 1.5rem; }
+  z-index: 9999; }
 
 .site-header .container {
   -ms-flex-align: center;
@@ -794,17 +795,30 @@ object {
 .home-header {
   display: none; }
 
-.about {
-  margin: 3rem;
+.page-template-page-about .entry-title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: .1rem;
+  margin: 0 auto;
+  position: absolute;
+  top: 50vh;
+  width: 100%;
+  z-index: 999; }
+
+.page-template-page-about .entry-content {
+  position: relative; }
+
+.page-template-page-about .entry-content-text {
   max-width: 800px;
   margin: 0 auto; }
-  .about h2 {
+  .page-template-page-about .entry-content-text h2 {
     color: black;
     font-size: 2rem;
     font-weight: 700;
     text-align: center;
-    margin: 2.5rem 0 1rem; }
-  .about p {
+    margin: 3rem 0 2rem; }
+  .page-template-page-about .entry-content-text p {
     line-height: 1.75rem; }
 
 .site-footer {
@@ -1074,6 +1088,9 @@ object {
   .product-taxonomy a:visited {
     color: #248A83; }
 
+.taxonomy-description {
+  margin-bottom: 3rem; }
+
 .blog .site-content, .post-template-default .site-content {
   display: -ms-flexbox;
   display: flex;
@@ -1199,7 +1216,58 @@ object {
   margin-bottom: 4.5rem;
   margin-top: .5rem; }
 
-input[type="submit"] {
+.comment-form {
+  border-radius: 0;
+  font-family: "novecento_sans_wide", sans-serif;
+  text-transform: uppercase; }
+
+.page-id-43 .site-content {
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5rem;
+  width: 1120px; }
+
+.page-id-43 .content-area {
+  border-right: 1px solid #e1e1e1;
+  -ms-flex: 0 1 73%;
+      flex: 0 1 73%;
+  padding-right: 3.5rem; }
+
+.page-id-43 .entry-content {
+  margin-top: 0; }
+
+.page-id-43 .entry {
+  margin-bottom: 4rem; }
+
+.page-id-43 .entry-header {
+  position: relative; }
+
+.page-id-43 .entry-title, .page-id-43 h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  text-align: left;
+  margin: 1.5rem 0; }
+
+.page-id-43 .wpcf7-form label {
+  font-family: "novecento_sans_wide", sans-serif;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  margin-bottom: 5rem; }
+
+.page-id-43 .wpcf7-form .required {
+  color: #d99054; }
+
+.page-id-43 .wpcf7-form input, .page-id-43 .wpcf7-form textarea {
+  color: #666;
+  background-color: #f4f4f4;
+  border: 1px solid #e1e1e1;
+  border-radius: 0;
+  margin-top: .5rem; }
+
+.page-id-43 .wpcf7-form input[type="submit"] {
   background: #248A83;
   border: none;
   border-radius: 0;
@@ -1207,7 +1275,6 @@ input[type="submit"] {
   color: #fff;
   font-family: "novecento_sans_wide", sans-serif;
   font-size: .9rem;
-  margin: 2rem 0 2rem;
   padding: .8rem 1.5rem;
   text-shadow: none;
   text-transform: uppercase;

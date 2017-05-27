@@ -17,12 +17,6 @@ if ( post_password_required() ) {
 
 <div id="comments" class="comments-area">
 
-	<div class="comments-social social-buttons">
-		<a class="product-button" href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Like</a>
-		<a class="product-button" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
-		<a class="product-button" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> Pin</a>
-	</div>
-
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php esc_html( comments_number( '0 Comments', '1 Comment', '% Comments' ) ); ?>

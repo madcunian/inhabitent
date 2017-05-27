@@ -47,7 +47,7 @@ get_header(); ?>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
       <?php else : ?>
-            <h2>Nothing found!</h2>
+        <h2>Nothing found!</h2>
       <?php endif; ?>
     </div>
 		</main><!-- #main -->

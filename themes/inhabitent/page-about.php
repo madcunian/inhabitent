@@ -15,12 +15,11 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 			<?php endwhile; // End of the loop. ?>
-        <div class="entry-content">
+        <div class="entry-content-text">
           <?php echo CFS()->get( 'our_story' ); ?>
           <?php echo CFS()->get( 'our_team' ); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>
