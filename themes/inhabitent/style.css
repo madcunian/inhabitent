@@ -462,7 +462,17 @@ a {
     outline: 0; }
 
 /* Menus */
+.home .site-header, .page-template-page-about .site-header {
+  background-color: transparent;
+  border-bottom: none;
+  padding: .5rem 0;
+  position: absolute;
+  width: 100%;
+  z-index: 9999; }
+
 .site-header {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-bottom: 1px solid #e1e1e1;
   padding: .5rem 0;
   position: fixed;
   width: 100%;
@@ -476,23 +486,39 @@ a {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
+.home .site-branding, .page-template-page-about .site-branding {
+  height: 33px;
+  width: 50px; }
+  .home .site-branding .logo, .page-template-page-about .site-branding .logo {
+    background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg") no-repeat;
+    background-size: 50px 33px;
+    height: 33px; }
+
 .site-branding {
   height: 33px;
   width: 50px; }
+  .site-branding .logo {
+    background: url("../../assets/images/logos/inhabitent-logo-tent.svg") no-repeat;
+    background-size: 50px 33px;
+    height: 33px; }
 
-.logo {
-  background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg") no-repeat;
-  background-size: 50px 33px;
-  height: 33px; }
-
-.main-navigation .menu a {
+.home .menu a, .page-template-page-about .menu a {
   color: #fff;
   text-shadow: 1px 1px 2px #3d3d3d; }
 
-.main-navigation .menu a:hover {
+.home .menu a:hover, .page-template-page-about .menu a:hover {
   color: #f5ecc4; }
 
-.main-navigation .menu li {
+.home .menu li, .page-template-page-about .menu li {
+  margin: 0 1rem; }
+
+.menu a {
+  color: #248A83; }
+
+.menu a:hover {
+  color: #404040; }
+
+.menu li {
   margin: 0 1rem; }
 
 .main-navigation ul {
@@ -823,8 +849,7 @@ object {
 
 .site-footer {
   background: url("../../assets/images/dark-wood.png");
-  background-size: 512px 512px;
-  margin-top: 4rem; }
+  background-size: 512px 512px; }
 
 .site-info {
   display: -ms-flexbox;
@@ -960,7 +985,8 @@ object {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  padding-bottom: 3rem; }
 
 .home-posts {
   -ms-flex: 0 1 32%;
@@ -1006,7 +1032,8 @@ object {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  padding-bottom: 3rem; }
 
 .product-grid-item {
   -ms-flex: 0 1 23%;
@@ -1096,7 +1123,7 @@ object {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 5rem;
+  padding-top: 3.1rem;
   width: 1120px; }
 
 .blog .content-area, .post-template-default .content-area {
@@ -1226,7 +1253,7 @@ object {
   display: flex;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 5rem;
+  padding-top: 3.1rem;
   width: 1120px; }
 
 .page-id-43 .content-area {
