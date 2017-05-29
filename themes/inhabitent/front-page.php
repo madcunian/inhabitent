@@ -49,7 +49,22 @@ get_header(); ?>
     
     <h2>Latest adventures</h2>
     <div class="adventures container">
-
+      <div class="big-square">
+        <h2 class="adventures-title">Getting Back to Nature in a Canoe</h2>
+        <a href="#"><div class="white-button">Read More</div></a>
+      </div>
+      <div class="rectangle">
+        <h2 class="adventures-title">A Night with Friends at the Beach</h2>
+        <a href="#"><div class="white-button">Read More</div></a>
+      </div>
+      <div class="small-square">
+        <h2 class="adventures-title">Taking in the View at Big Mountain</h2>
+        <a href="#"><div class="white-button">Read More</div></a>
+      </div>
+      <div class="small-square2">
+        <h2 class="adventures-title">Star-Gazing at the Night Sky</h2>
+        <a href="#"><div class="white-button">Read More</div></a>
+      </div>
     </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
