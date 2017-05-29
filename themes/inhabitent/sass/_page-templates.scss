@@ -41,12 +41,13 @@
   }
 
   .entry-content {
+    margin: 0;
     position: relative;
   }
 
   .entry-content-text {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto 4.5rem;
 
     h2 {
       color: black;
@@ -182,10 +183,6 @@
   color: #fff;
   border: 1px solid #248A83;
   background-color: #248A83;
-}
-
-.nav-previous, .nav-next {
-  display: none;
 }
 
 .blog {

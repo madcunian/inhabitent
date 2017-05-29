@@ -26,8 +26,6 @@ get_header(); ?>
 			<p class="entry"><a href="<?php the_permalink(); ?>" class="product-button">Read More →</a></p>
 			<?php endwhile; ?>
 
-			<?php the_posts_navigation(); ?>
-
 		<?php else : ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>

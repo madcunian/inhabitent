@@ -46,6 +46,11 @@ get_header(); ?>
         <h2>Nothing found!</h2>
       <?php endif; ?>
     </div>
+    
+    <h2>Latest adventures</h2>
+    <div class="adventures container">
+
+    </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

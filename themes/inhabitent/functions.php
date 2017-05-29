@@ -95,6 +95,14 @@ function inhabitent_scripts() {
 		true
 	);
 
+	wp_enqueue_script(
+		'inhabitent-green-header',
+		get_template_directory_uri() . '/js/header.js',
+		array('jquery'),
+		false,
+		true
+	);
+
 	wp_enqueue_script( 'font-awesome-cdn', 'https://use.fontawesome.com/35e3d1be3c.js', array(), '4.7.0' );
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
@@ -113,8 +121,3 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
-
-// add_action('get_header', 'remove_admin_login_header');
-// function remove_admin_login_header() {
-// 	remove_action('wp_head', '_admin_bar_bump_cb');
-// }

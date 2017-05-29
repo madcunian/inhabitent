@@ -26,6 +26,12 @@ a {
 
 /* Menus */
 
+.site-header .container, .site-header-green .container {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
 .home, .page-template-page-about {
 	.site-header {
 		background-color: transparent;
@@ -35,24 +41,7 @@ a {
 		width: 100%;
 		z-index: 9999;
 	}
-}
 
-.site-header {
-	background-color: rgba(255, 255, 255, .8);
-	border-bottom: 1px solid #e1e1e1;
-	padding: .5rem 0;
-	position: fixed;
-	width: 100%;
-	z-index: 9999;
-}
-
-.site-header .container {
-	align-items: center;
-	display: flex;
-	justify-content: space-between;
-}
-
-.home, .page-template-page-about {
 	.site-branding {
 		height: 33px;
 		width: 50px;
@@ -86,6 +75,30 @@ a {
 	::placeholder {
 		color: #f5ecc4;
 	}
+
+	.menu {
+		a {
+			color: #fff;
+			text-shadow: 1px 1px 2px #3d3d3d;
+		}
+
+		a:hover {
+			color: #f5ecc4;
+		}
+
+		li {
+			margin: 0 .75rem;
+		}
+	}
+}
+
+.site-header {
+	background-color: rgba(255, 255, 255, .8);
+	border-bottom: 1px solid #e1e1e1;
+	padding: .5rem 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
 }
 
 .site-branding {
@@ -114,22 +127,68 @@ a {
 	margin-left: 1rem;
 }
 
-.home, .page-template-page-about {
+.site-header-green {
+	background-color: rgba(255, 255, 255, .8);
+	border-bottom: 1px solid #e1e1e1;
+	padding: .5rem 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9999;
+
+	.site-branding {
+		height: 33px;
+		width: 50px;
+
+		.logo {
+			background:
+				url('../../assets/images/logos/inhabitent-logo-tent.svg') no-repeat;
+			background-size: 50px 33px;
+			height: 33px;
+		}
+	}
+
+	.fa-search {
+		color: #248A83;
+		cursor: pointer;
+		margin-left: .75rem;
+		text-shadow: none;
+	}
+
+	.fa-search:hover {
+		color: #404040;
+	}
+
+	.search-form {
+		margin-left: 1rem;
+	}
+
 	.menu {
 		a {
-			color: #fff;
-			text-shadow: 1px 1px 2px #3d3d3d;
+			color: #248A83;
+			text-shadow: none;
 		}
 
 		a:hover {
-			color: #f5ecc4;
+			color: #404040;
 		}
 
 		li {
 			margin: 0 .75rem;
 		}
 	}
+
+	.search-form {
+		margin-left: 1rem;
+		input {
+			color: #000;
+		}
+	}
+
+	::placeholder {
+		color: #404040;
+	}
 }
+
 
 .menu {
 	a {
@@ -141,7 +200,7 @@ a {
 	}
 
 	li {
-		margin: 0 1rem;
+		margin: 0 .75rem;
 	}
 }
 

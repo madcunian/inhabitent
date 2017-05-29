@@ -59,7 +59,7 @@ add_action( 'pre_get_posts', 'inhabitent_modify_archive_queries' );
 function inhabitent_about_hero() {
 	wp_enqueue_style(
 		'custom-style',
-		get_template_directory_uri() . '/build/css/style.min.css'
+		get_template_directory_uri() . '/page-about.php'
 	);
 		$background = CFS()->get( 'about_hero' );
 		$about_hero_css = "
@@ -75,6 +75,7 @@ function inhabitent_about_hero() {
 		wp_add_inline_style( 'custom-style', $about_hero_css );
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_about_hero' );
+
 
 function archive_title_filter( $title ) {
 	if ( is_post_type_archive( 'product' ) ) {
