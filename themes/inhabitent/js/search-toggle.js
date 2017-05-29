@@ -6,5 +6,6 @@
     event.preventDefault();
 
     $('.search-form').animate({width:'toggle'},350);
+    $('.search-field').focus();
   });
 })(jQuery);
