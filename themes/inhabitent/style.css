@@ -1206,11 +1206,15 @@ object {
   height: 250px;
   overflow: hidden;
   position: relative; }
-  .product-item-thumbnail img {
-    height: 250px;
-    max-width: none;
-    position: absolute;
-    width: auto; }
+
+.wp-post-image {
+  height: 250px;
+  left: 50%;
+  max-width: none;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto; }
 
 .product-item-text {
   display: -ms-flexbox;
