@@ -9,25 +9,21 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-      <section class="home-hero"></section>
+      <section class="home-hero">
+        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logos/inhabitent-logo-full.svg" class="logo" alt="Inhabitent Logo" />
+      </section>
 
-      <?php
-        $product_types = get_terms(array (
-          'taxonomy' => 'product_type',
-          'hide_empty' => 0
-        ));
-        if (!empty($product_types) && !is_wp_error($product_types)) : ?>
-        <h2>Shop Stuff</h2>
-        <div class="product-type-front container">
-          <?php foreach ($product_types as $product_type) : ?>
+      <h2>Shop Stuff</h2>
+        <section class="product-type-front container">
+        <?php $terms = get_terms('product_type')?>
+          <?php foreach ( $terms as $product_type) : ?>
             <div class="product-type-front-block">
-              <img src="<?php echo get_template_directory_uri() ?>/assets/images/product-type-icons/<?php echo $product_type->slug ?>.svg" alt="<?php echo $product_type->name; ?>">
-              <p><?php echo $product_type->description; ?></p>
-              <a href="<?php echo get_term_link($product_type);?>" class="product-type-button"><?php echo $product_type->name; ?> Stuff</a>
+              <img src="<?php echo get_template_directory_uri() ?>/assets/images/product-type-icons/<?php echo $product_type->slug ?>.svg" alt="<?php echo $product_type->name; ?>" />
+              <p class="description"><?php echo $product_type->description ?></p>
+              <a href="<?php echo get_term_link($product_type); ?>/" class="product-type-button"><?php echo $product_type->slug ?> Stuff</a>
             </div>
           <?php endforeach; ?>
-        </div>
-        <?php endif; ?>
+      </section>
 
       <h2>Inhabitent Journal</h2>
       <div class="journal container">

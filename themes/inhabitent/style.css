@@ -755,7 +755,7 @@ h1, h2 {
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
-  margin-bottom: 3rem; }
+  margin-bottom: 3.75rem; }
 
 .copyright, .menu {
   font-family: "novecento_sans_wide", sans-serif;
@@ -865,10 +865,19 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .home-hero {
-  background: url("../../assets/images/logos/inhabitent-logo-full.svg") center no-repeat, linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center, url("../../assets/images/home-hero.jpg") top no-repeat;
-  background-size: 275px, cover, cover;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center, url("../../assets/images/home-hero.jpg") top no-repeat;
+  background-size: cover, cover;
   height: 100vh;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center; }
+
+.logo {
+  height: 275px; }
 
 .home-header {
   display: none; }
