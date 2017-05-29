@@ -26,9 +26,8 @@ get_header(); ?>
               <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
             </div>
             <p class="product-item-text">
-              <?php the_title(); ?>
-              <span>......</span>
-              <?php echo CFS()->get( 'price' ); ?>
+              <span class="item-title"><?php the_title(); ?></span>
+              <span class="item-price"><?php echo CFS()->get( 'price' ); ?></span>
             </p>
           </div>
       </setion>

@@ -9,6 +9,10 @@
 	select {
 		max-width: 100%;
 	}
+
+	p {
+		margin-bottom: 1rem;
+	}
 }
 
 /* Search widget. */
@@ -22,7 +26,7 @@
 	padding-top: 3rem;
 }
 
-.widget_text, .contacts-class, .business-hours-class, .widget_archive {
+.widget_text, .contacts-class, .business-hours-class, .widget_archive, .widget_recent_entries, .widget_categories {
 	margin-bottom: 3rem;
 	a {
 		color: #248A83;
@@ -33,7 +37,7 @@
 		color: $color__text-main;
 	}
 
-  .widget-title {
+  .widget-title, .widgettitle {
     font-family: "novecento_sans_wide", sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
@@ -56,8 +60,10 @@
 	}
 }
 
-.widget_archive ul {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
+.widget_archive, .widget_recent_entries, .widget_categories {
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
 }
