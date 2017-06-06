@@ -20,8 +20,6 @@ get_header(); ?>
 				<a class="product-button" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> Pin</a>
 			</div>
 
-			<?php the_post_navigation(); ?>
-
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :

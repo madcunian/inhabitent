@@ -51,22 +51,28 @@ get_header(); ?>
     <div class="adventures container">
 
       <?php $adventure_posts = new WP_Query( array (
-        'post_type' => 'adventures',
+        'post_type' => 'adventure',
         'posts_per_page' => 4,
         'order' => 'ASC'
       ) ); ?>
 
+
+        <?php if ( $adventure_posts->have_posts() ) : ?>
         <?php while ( $adventure_posts->have_posts() ) : $adventure_posts->the_post(); ?>
           <div class="adventure-posts"><?php the_post_thumbnail( 'full' ); ?>
 
             <div class="adventure-post">
-              <h3 class="adventures-title"><?php the_title(); ?></h3>
+              <h3 class="adventures-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
               <a href="<?php the_permalink(); ?>" class="white-button">Read More</a>
             </div>
           </div>
         <?php endwhile; ?>
         <?php wp_reset_postdata(); ?>
+        <?php endif ?>
 
+    </div>
+    <div class="adventure-button container">
+      <a href="adventure"><p class="more-adventures product-type-button">More adventures</p></a>
     </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->

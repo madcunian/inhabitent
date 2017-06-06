@@ -20,32 +20,32 @@
 				?>
 
       <?php
-        $product_types = get_terms(array (
-          'taxonomy' => 'product_type',
+        $adventure_types = get_terms(array (
+          'taxonomy' => 'adventure',
           'hide_empty' => 0
         ));
-        if (!empty($product_types) && !is_wp_error($product_types)) : ?>
+        if (!empty($adventure_types) && !is_wp_error($adventure_types)) : ?>
       
         <div class="product-taxonomy-shop container">
-          <?php foreach ($product_types as $product_type) : ?>
+          <?php foreach ($adventure_types as $adventure_type) : ?>
             <div class="product-taxonomy">
-              <a href="<?php echo get_term_link($product_type);?>"><?php echo $product_type->name; ?></a>
+              <a href="<?php echo get_term_link($adventure_type);?>"><?php echo $adventure_type->name; ?></a>
             </div>
           <?php endforeach; ?>
         </div>
         <?php endif; ?>
 			</header><!-- .page-header -->
 
-      <section class="product-grid container">
+      <section class="adventures-grid container">
         <?php while ( have_posts() ) : the_post(); ?>
-          <div class="product-grid-item">
-            <div class="product-item-thumbnail">
+          <div class="adventures-grid-item">
+            <div class="adventures-item-thumbnail">
               <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
             </div>
-            <p class="product-item-text">
+            <p class="adventures-item-text">
               <span class="item-title"><?php the_title(); ?></span>
-              <span class="item-price"><?php echo CFS()->get( 'price' ); ?></span>
             </p>
+            <a href="<?php the_permalink(); ?>" class="white-button">Read More</a>
           </div>
       </setion>
 

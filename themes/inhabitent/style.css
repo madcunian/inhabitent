@@ -469,7 +469,7 @@ a {
   -ms-flex-pack: justify;
       justify-content: space-between; }
 
-.home .site-header, .page-template-page-about .site-header {
+.home .site-header, .page-template-page-about .site-header, .adventure-template-default .site-header {
   background-color: transparent;
   border-bottom: none;
   padding: .5rem 0;
@@ -477,45 +477,45 @@ a {
   width: 100%;
   z-index: 9999; }
 
-.home .site-branding, .page-template-page-about .site-branding {
+.home .site-branding, .page-template-page-about .site-branding, .adventure-template-default .site-branding {
   height: 33px;
   width: 50px; }
-  .home .site-branding .logo, .page-template-page-about .site-branding .logo {
+  .home .site-branding .logo, .page-template-page-about .site-branding .logo, .adventure-template-default .site-branding .logo {
     background: url("../../assets/images/logos/inhabitent-logo-tent-white.svg") no-repeat;
     background-size: 50px 33px;
     height: 33px; }
 
-.home .fa-search, .page-template-page-about .fa-search {
+.home .fa-search, .page-template-page-about .fa-search, .adventure-template-default .fa-search {
   color: #fff;
   cursor: pointer;
   text-shadow: 1px 1px 2px #3d3d3d;
   margin-left: .75rem; }
 
-.home .fa-search:hover, .page-template-page-about .fa-search:hover {
+.home .fa-search:hover, .page-template-page-about .fa-search:hover, .adventure-template-default .fa-search:hover {
   color: #f5ecc4; }
 
-.home .search-form, .page-template-page-about .search-form {
+.home .search-form, .page-template-page-about .search-form, .adventure-template-default .search-form {
   margin-left: 1rem; }
-  .home .search-form input, .page-template-page-about .search-form input {
+  .home .search-form input, .page-template-page-about .search-form input, .adventure-template-default .search-form input {
     color: #fff; }
 
-.home ::-webkit-input-placeholder, .page-template-page-about ::-webkit-input-placeholder {
+.home ::-webkit-input-placeholder, .page-template-page-about ::-webkit-input-placeholder, .adventure-template-default ::-webkit-input-placeholder {
   color: #f5ecc4; }
 
-.home :-ms-input-placeholder, .page-template-page-about :-ms-input-placeholder {
+.home :-ms-input-placeholder, .page-template-page-about :-ms-input-placeholder, .adventure-template-default :-ms-input-placeholder {
   color: #f5ecc4; }
 
-.home ::placeholder, .page-template-page-about ::placeholder {
+.home ::placeholder, .page-template-page-about ::placeholder, .adventure-template-default ::placeholder {
   color: #f5ecc4; }
 
-.home .menu a, .page-template-page-about .menu a {
+.home .menu a, .page-template-page-about .menu a, .adventure-template-default .menu a {
   color: #fff;
   text-shadow: 1px 1px 2px #3d3d3d; }
 
-.home .menu a:hover, .page-template-page-about .menu a:hover {
+.home .menu a:hover, .page-template-page-about .menu a:hover, .adventure-template-default .menu a:hover {
   color: #f5ecc4; }
 
-.home .menu li, .page-template-page-about .menu li {
+.home .menu li, .page-template-page-about .menu li, .adventure-template-default .menu li {
   margin: 0 .75rem; }
 
 .site-header {
@@ -1049,13 +1049,13 @@ object {
   border: 1px solid #248A83;
   background-color: #248A83; }
 
-.blog .page-header {
+.blog .page-header, .archive .page-header {
   border-bottom: 1px dashed #a1a1a1;
   margin: 0 auto 2.5rem;
   text-align: center;
   width: 1120px; }
 
-.blog .page-title {
+.blog .page-title, .archive .page-title {
   font-size: 2.4rem;
   font-weight: 700;
   letter-spacing: .1rem;
@@ -1160,7 +1160,6 @@ object {
   margin-top: .25rem; }
 
 .journal-title {
-  color: #248A83;
   font-family: "novecento_sans_wide", sans-serif;
   font-size: 1.3rem;
   height: 4rem;
@@ -1170,6 +1169,7 @@ object {
   margin-top: .5rem;
   text-transform: uppercase; }
   .journal-title a {
+    color: #248A83;
     text-decoration: none; }
   .journal-title a:visited {
     color: #248A83; }
@@ -1212,6 +1212,14 @@ object {
   height: 250px;
   overflow: hidden;
   position: relative; }
+  .product-item-thumbnail img {
+    height: 100%;
+    width: auto;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -70%);
+    max-width: none;
+    position: absolute; }
 
 .product-item-text {
   display: -ms-flexbox;
@@ -1291,18 +1299,18 @@ object {
   margin-bottom: 3rem; }
 
 .product-taxonomy {
-  color: #248A83;
   font-family: "novecento_sans_wide", sans-serif;
   font-size: 1.2rem;
   text-align: center;
   text-transform: uppercase;
   margin: 0 1.5rem; }
   .product-taxonomy a {
+    color: #248A83;
     text-decoration: none; }
-  .product-taxonomy a:hover {
-    color: #404040; }
   .product-taxonomy a:visited {
     color: #248A83; }
+  .product-taxonomy a:hover {
+    color: #404040; }
 
 .taxonomy-description {
   margin-bottom: 3rem;
@@ -1553,9 +1561,12 @@ object {
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 1.25rem;
   grid-auto-rows: minmax(120px, auto);
-  margin-bottom: 4rem; }
+  margin-bottom: 1.5rem; }
   .adventures a {
+    color: #fff;
     text-decoration: none; }
+  .adventures a:hover {
+    color: #f5ecc4; }
   .adventures .adventure-posts {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)) center;
     border: 1px solid #e1e1e1;
@@ -1574,7 +1585,6 @@ object {
       position: absolute;
       padding: 1.5rem; }
   .adventures .adventures-title {
-    color: #fff;
     font-family: "Merriweather", sans-serif;
     font-size: 3rem;
     font-weight: 300;
@@ -1583,9 +1593,6 @@ object {
     margin: 1.5rem 0;
     text-align: left;
     text-transform: none; }
-  .adventures .adventures-title:hover {
-    cursor: pointer;
-    color: #f5ecc4; }
   .adventures .white-button {
     border: 1px solid #fff;
     color: white;
@@ -1596,7 +1603,8 @@ object {
     width: 130px; }
   .adventures .white-button:hover {
     background-color: #248A83;
-    border: 1px solid #248A83; }
+    border: 1px solid #248A83;
+    color: #fff; }
   .adventures .adventure-posts:first-child {
     grid-column: 1/3;
     grid-row: 1/5; }
@@ -1624,3 +1632,31 @@ object {
     .adventures .adventure-posts:last-child .adventures-title {
       font-size: 1.6rem;
       line-height: 2rem; }
+
+.adventure-button a {
+  text-decoration: none; }
+
+.adventure-button a:visited {
+  color: #fff; }
+
+.more-adventures {
+  font-size: 1.2rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  width: 250px; }
+
+.adventure-content {
+  line-height: 1.75rem;
+  max-width: 800px;
+  margin: 0 auto 4.5rem; }
+  .adventure-content h2 {
+    letter-spacing: .1rem;
+    line-height: 3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    text-align: left; }
+  .adventure-content .adventure-author {
+    font-family: "novecento_sans_wide", sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    text-transform: uppercase; }

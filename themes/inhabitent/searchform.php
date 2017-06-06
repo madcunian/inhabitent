@@ -3,6 +3,6 @@
 		<label>
 			<input type="search" class="search-field" placeholder="Type and hit enter..." value="<?php echo esc_attr( get_search_query() ); ?>" name="s" title="Search for:" />
 		</label>
-			<!--<i class="fa fa-search"></i>-->
+			<!--<i class="fa fa-search" aria-hidden="true"></i>-->
 	</fieldset>
 </form>

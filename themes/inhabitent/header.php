@@ -32,9 +32,9 @@
 						<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 						<i class="fa fa-search" aria-hidden="true"></i>
-						<div class="header-search">
+						<!--<div class="header-search">-->
 								<?php get_search_form();?>
-						</div>
+						<!--</div>-->
 					</nav><!-- #site-navigation -->
 				</div>
 			</header><!-- #masthead -->
