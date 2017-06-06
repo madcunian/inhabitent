@@ -36,7 +36,7 @@ get_header(); ?>
             <div class="journal-thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
             <div class="journal-post">
               <p class="journal-comment"><?php the_time('F jS, Y'); ?> / <?php comments_number('0 comments ', '1 comment', '% comments'); ?></p>
-              <h3 class="journal-title"><?php the_title(); ?></h3>
+              <h3 class="journal-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
               <p class="entry"><a href="<?php the_permalink(); ?>" class="product-button">Read Entry</a></p>
             </div>
           </div>
@@ -49,22 +49,24 @@ get_header(); ?>
     
     <h2>Latest adventures</h2>
     <div class="adventures container">
-      <div class="big-square">
-        <h2 class="adventures-title">Getting Back to Nature in a Canoe</h2>
-        <a href="#"><div class="white-button">Read More</div></a>
-      </div>
-      <div class="rectangle">
-        <h2 class="adventures-title">A Night with Friends at the Beach</h2>
-        <a href="#"><div class="white-button">Read More</div></a>
-      </div>
-      <div class="small-square">
-        <h2 class="adventures-title">Taking in the View at Big Mountain</h2>
-        <a href="#"><div class="white-button">Read More</div></a>
-      </div>
-      <div class="small-square2">
-        <h2 class="adventures-title">Star-Gazing at the Night Sky</h2>
-        <a href="#"><div class="white-button">Read More</div></a>
-      </div>
+
+      <?php $adventure_posts = new WP_Query( array (
+        'post_type' => 'adventures',
+        'posts_per_page' => 4,
+        'order' => 'ASC'
+      ) ); ?>
+
+        <?php while ( $adventure_posts->have_posts() ) : $adventure_posts->the_post(); ?>
+          <div class="adventure-posts"><?php the_post_thumbnail( 'full' ); ?>
+
+            <div class="adventure-post">
+              <h3 class="adventures-title"><?php the_title(); ?></h3>
+              <a href="<?php the_permalink(); ?>" class="white-button">Read More</a>
+            </div>
+          </div>
+        <?php endwhile; ?>
+        <?php wp_reset_postdata(); ?>
+
     </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
