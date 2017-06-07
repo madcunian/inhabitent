@@ -15,16 +15,17 @@
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h2 class="page-title">', '</h1>' );
+					the_archive_title( '<h2 class="page-title">', '</h2>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
 
       <?php
         $adventure_types = get_terms(array (
           'taxonomy' => 'adventure',
-          'hide_empty' => 0
-        ));
-        if (!empty($adventure_types) && !is_wp_error($adventure_types)) : ?>
+          'hide_empty' => 0,
+          'order' => 'ASC'
+        ) ); ?>
+        <?php if (!empty($adventure_types) && !is_wp_error($adventure_types)) : ?>
       
         <div class="product-taxonomy-shop container">
           <?php foreach ($adventure_types as $adventure_type) : ?>
@@ -36,22 +37,18 @@
         <?php endif; ?>
 			</header><!-- .page-header -->
 
-      <section class="adventures-grid container">
+      <section class="archive-adventure-grid container">
         <?php while ( have_posts() ) : the_post(); ?>
-          <div class="adventures-grid-item">
-            <div class="adventures-item-thumbnail">
-              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
+          <div class="archive-adventure-item">
+            <?php the_post_thumbnail( 'full' ); ?>
+            <div class="archive-adventure-post">
+              <h3 class="archive-adventure-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+              <a href="<?php the_permalink(); ?>" class="white-button">Read More</a>
             </div>
-            <p class="adventures-item-text">
-              <span class="item-title"><?php the_title(); ?></span>
-            </p>
-            <a href="<?php the_permalink(); ?>" class="white-button">Read More</a>
           </div>
       </setion>
 
 			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
 
 		<?php else : ?>
 

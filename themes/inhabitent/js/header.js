@@ -5,13 +5,23 @@
     var winH = $(window).height();
 
     if ($(window).scrollTop() > winH) {
-      $('.home header, .page-template-page-about header, .single-adventure header').addClass('site-header-green');
-      $('.home header, .page-template-page-about header, .single-adventure header').removeClass('site-header');
-      $('.page-template-page-about .site-content header.site-header-green').not(this).removeClass('site-header-green');
+      $('.home header, .page-template-page-about header').addClass('site-header-green');
+      $('.home header, .page-template-page-about header').removeClass('site-header');
 
     } else if ($(window).scrollTop() < winH) {
-      $('.home header, .page-template-page-about header, .single-adventure header').removeClass('site-header-green');
-      $('.home header, .page-template-page-about header, .single-adventure header').addClass('site-header');
+      $('.home header, .page-template-page-about header').removeClass('site-header-green');
+      $('.home header, .page-template-page-about header').addClass('site-header');
+    }
+
+    var advWinH = $('.adventure-image img').height();
+
+    if ($(window).scrollTop() > advWinH) {
+      $('.adventure-template-default header').addClass('site-header-green');
+      $('.adventure-template-default header').removeClass('site-header');
+
+    } else if ($(window).scrollTop() < advWinH) {
+      $('.adventure-template-default header').removeClass('site-header-green');
+      $('.adventure-template-default header').addClass('site-header');
     }
   });
 

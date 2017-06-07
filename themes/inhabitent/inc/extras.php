@@ -80,7 +80,9 @@ add_action( 'wp_enqueue_scripts', 'inhabitent_about_hero' );
 function archive_title_filter( $title ) {
 	if ( is_post_type_archive( 'product' ) ) {
 		$title = 'Shop Stuff';
-	} elseif ( is_tax( 'product_type' ) ) {
+	} elseif ( is_post_type_archive( 'adventure' ) ) {
+		$title = 'Latest Adventures';
+	}	elseif ( is_tax( 'product_type' ) ) {
 		$title = single_term_title('', false);
 	}
 	return $title;

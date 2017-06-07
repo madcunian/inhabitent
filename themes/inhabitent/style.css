@@ -1052,6 +1052,7 @@ object {
 .blog .page-header, .archive .page-header {
   border-bottom: 1px dashed #a1a1a1;
   margin: 0 auto 2.5rem;
+  padding-bottom: .5rem;
   text-align: center;
   width: 1120px; }
 
@@ -1296,7 +1297,7 @@ object {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  margin-bottom: 3rem; }
+  margin-bottom: 2.5rem; }
 
 .product-taxonomy {
   font-family: "novecento_sans_wide", sans-serif;
@@ -1652,11 +1653,68 @@ object {
   .adventure-content h2 {
     letter-spacing: .1rem;
     line-height: 3rem;
-    margin-bottom: 0.5rem;
+    margin: 3rem 0 0.5rem;
     font-weight: 700;
     text-align: left; }
   .adventure-content .adventure-author {
     font-family: "novecento_sans_wide", sans-serif;
     font-size: 1.2rem;
-    margin: 0;
+    margin: 0 0 1.5rem;
     text-transform: uppercase; }
+
+.archive-adventure-grid {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  margin-bottom: 4rem; }
+  .archive-adventure-grid a {
+    color: #fff;
+    text-decoration: none; }
+  .archive-adventure-grid a:hover {
+    color: #f5ecc4; }
+  .archive-adventure-grid .archive-adventure-item {
+    -ms-flex: 0 1 49%;
+        flex: 0 1 49%;
+    height: 500px;
+    margin-bottom: 1.5rem;
+    max-width: 49%;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4); }
+    .archive-adventure-grid .archive-adventure-item img {
+      height: 100%;
+      left: 50%;
+      max-width: none;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: auto;
+      z-index: -1; }
+    .archive-adventure-grid .archive-adventure-item .archive-adventure-post {
+      padding: 1.5rem;
+      z-index: 2; }
+  .archive-adventure-grid .archive-adventure-title {
+    font-family: "Merriweather", sans-serif;
+    font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    line-height: 3.5rem;
+    margin: 3rem 0 4rem;
+    text-align: left;
+    text-transform: none; }
+  .archive-adventure-grid .white-button {
+    border: 1px solid #fff;
+    color: white;
+    font-family: "novecento_sans_wide", sans-serif;
+    padding: .7rem 1.5rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 130px; }
+  .archive-adventure-grid .white-button:hover {
+    background-color: #248A83;
+    border: 1px solid #248A83;
+    color: #fff; }
