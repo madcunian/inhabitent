@@ -4,12 +4,6 @@ This is a multi-page website with a blog for a camping supply company called Inh
 
 It is built on starter theme for RED Academy students, forked from Underscores.
 
-## What I learned
-
-- How to automate time-consuming tasks and enhance workflow with Gulp.
-- How to use AJAX to exchange data without reloading the page/to fetch data from third-party APIs.
-- How to stylize websites more efficiently with Sass preprocessor.
-
 ## Technologies used
 
 ### Software
@@ -34,3 +28,10 @@ It is built on starter theme for RED Academy students, forked from Underscores.
 ### Interactivity
 - jQuery (http://jquery.com/)
 - PHP (http://php.net/)
+
+### WordPress features
+- Plugins
+- Custom Post Types
+- Custom Taxonomies
+- Templates
+- Field Groups
