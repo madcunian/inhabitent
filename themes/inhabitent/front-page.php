@@ -27,11 +27,12 @@ get_header(); ?>
 
       <h2>Inhabitent Journal</h2>
       <div class="journal container">
+
         <?php $args = array( 'posts_per_page' => 3,); ?>
 
-        <?php $posts = new WP_Query( $args ); ?>
-        <?php if ( $posts->have_posts() ) : ?>
-        <?php while ( $posts->have_posts() ) : $posts->the_post(); ?>
+        <?php $posts = get_posts( $args ); ?>
+        
+        <?php foreach ( $posts as $post ) : setup_postdata( $post ); ?>
           <div class="home-posts">
             <div class="journal-thumbnail"><?php the_post_thumbnail( 'large' ); ?></div>
             <div class="journal-post">
@@ -40,25 +41,23 @@ get_header(); ?>
               <p class="entry"><a href="<?php the_permalink(); ?>" class="product-button">Read Entry</a></p>
             </div>
           </div>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>
-      <?php else : ?>
-        <h2>Nothing found!</h2>
-      <?php endif; ?>
+    
     </div>
     
     <h2>Latest adventures</h2>
     <div class="adventures container">
 
-      <?php $adventure_posts = new WP_Query( array (
+      <?php $adventure_args = array (
         'post_type' => 'adventure',
         'posts_per_page' => 4,
         'order' => 'ASC'
-      ) ); ?>
+      ); ?>
 
+        <?php $adventure_posts = get_posts( $adventure_args ); ?>
 
-        <?php if ( $adventure_posts->have_posts() ) : ?>
-        <?php while ( $adventure_posts->have_posts() ) : $adventure_posts->the_post(); ?>
+        <?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
           <div class="adventure-posts"><?php the_post_thumbnail( 'full' ); ?>
 
             <div class="adventure-post">
@@ -66,9 +65,8 @@ get_header(); ?>
               <a href="<?php the_permalink(); ?>" class="white-button">Read More</a>
             </div>
           </div>
-        <?php endwhile; ?>
+        <?php endforeach; ?>
         <?php wp_reset_postdata(); ?>
-        <?php endif ?>
 
     </div>
     <div class="adventure-button container">

@@ -13,13 +13,7 @@ get_header(); ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-			
-			<div class="comments-social social-buttons">
-				<a class="product-button" href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Like</a>
-				<a class="product-button" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet</a>
-				<a class="product-button" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i> Pin</a>
-			</div>
-
+			<?php get_template_part( 'template-parts/content', 'social' ); ?>
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
 				if ( comments_open() || get_comments_number() ) :
