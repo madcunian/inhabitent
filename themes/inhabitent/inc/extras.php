@@ -57,22 +57,25 @@ function inhabitent_modify_archive_queries( $query ) {
 add_action( 'pre_get_posts', 'inhabitent_modify_archive_queries' );
 
 function inhabitent_about_hero() {
+
 	wp_enqueue_style(
 		'custom-style',
 		get_template_directory_uri() . '/page-about.php'
 	);
-		$background = CFS()->get( 'about_hero' );
-		$about_hero_css = "
-			.about-hero {
-				background:
-					linear-gradient(to bottom, rgba(0, 0, 0 ,0.4), rgba(0,0,0,0.4)) center,
-					url({$background}) bottom no-repeat;
-				background-size:
-					cover,
-					cover;
-				height: 100vh;
-			}";
-		wp_add_inline_style( 'custom-style', $about_hero_css );
+
+	$background = CFS()->get( 'about_hero' );
+	$about_hero_css = "
+		.about-hero {
+			background:
+				linear-gradient(to bottom, rgba(0, 0, 0 ,0.4), rgba(0,0,0,0.4)) center,
+				url({$background}) bottom no-repeat;
+			background-size:
+				cover,
+				cover;
+			height: 100vh;
+		}";
+	wp_add_inline_style( 'custom-style', $about_hero_css );
+
 }
 add_action( 'wp_enqueue_scripts', 'inhabitent_about_hero' );
 

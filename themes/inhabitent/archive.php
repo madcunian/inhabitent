@@ -17,33 +17,34 @@ get_header(); ?>
 					the_archive_title( '<h1 class="page-title">', '</h1>' );
 					the_archive_description( '<div class="taxonomy-description">', '</div>' );
 				?>
-			</header><!-- .page-header -->
+			</header>
 
-			<section class="product-grid container">
-        <?php while ( have_posts() ) : the_post(); ?>
-          <div class="product-grid-item">
-            <div class="product-item-thumbnail">
-              <a href="<?php the_permalink(); ?>"><?php the_post_thumbnail( 'medium' ); ?></a>
-            </div>
-            <p class="product-item-text">
-              <?php the_title(); ?>
-              <span>......</span>
-              <?php echo CFS()->get( 'price' ); ?>
-            </p>
-          </div>
-      </setion>
+			<?php if ( have_posts() ) : ?>
 
-			<?php endwhile; ?>
+				<?php if ( is_home() && ! is_front_page() ) : ?>
+					<header>
+						<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					</header>
+				<?php endif; ?>
 
-			<?php the_posts_navigation(); ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
 
-		<?php else : ?>
+					<?php get_template_part( 'template-parts/content' ); ?>
 
-			<?php get_template_part( 'template-parts/content', 'none' ); ?>
+				<p class="entry"><a href="<?php the_permalink(); ?>" class="product-button">Read More →</a></p>
+				<?php endwhile; ?>
+
+			<?php else : ?>
+
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+			<?php endif; ?>
 
 		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
+<?php get_sidebar(); ?>
 <?php get_footer(); ?>
