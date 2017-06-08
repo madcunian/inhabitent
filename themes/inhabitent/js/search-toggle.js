@@ -10,10 +10,10 @@
     $('.search-field').focus();
   });
 
-  $(window).on('click', function(e){
-    e.preventDefault();
+  // $(window).on('click', function(e){
+  //   e.preventDefault();
 
-    $('.search-form').animate({width:'hide'},350);
-  });
+  //   $('.search-form').animate({width:'hide'},350);
+  // });
 
 })(jQuery);
